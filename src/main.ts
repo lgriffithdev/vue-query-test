@@ -1,5 +1,11 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import { VueQueryPlugin } from 'vue-query';
 
-createApp(App).use(router).mount('#app')
+import './styles/main.scss';
+
+createApp(App)
+  .use(router)
+  .use(VueQueryPlugin)
+  .mount('#app');
